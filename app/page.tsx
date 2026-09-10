@@ -2,8 +2,6 @@
 // page.tsx is a Server Component (no "use client") — all animation logic
 // lives inside the individual "use client" section components.
 // GSAP plugins are registered inside each component that uses them.
-
-import Navbar         from "@/components/layout/Navbar";
 import Footer         from "@/components/layout/Footer";
 import Hero           from "@/components/sections/Hero";
 import About          from "@/components/sections/About";
@@ -15,7 +13,6 @@ import SectionDivider from "@/components/ui/SectionDivider";
 export default function Home() {
   return (
     <>
-      <Navbar />
       <main>
         <Hero />
 

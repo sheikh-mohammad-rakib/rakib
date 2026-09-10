@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import SmoothScroll from "@/components/providers/SmoothScroll";
 
 // ─── Fonts ────────────────────────────────────────────────────────────────────
 // Playfair Display: display / hero headings and logotype only
@@ -48,8 +50,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
     </html>
   );
 }
-
