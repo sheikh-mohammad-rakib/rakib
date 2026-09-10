@@ -23,11 +23,11 @@ const HEADING  = "Let's build something.";
 const SUBTEXT  =
   "Whether you have a project in mind or just want to say hi — my inbox is always open.";
 
-// TODO: replace all href="#" with real URLs before going live
+// Social Links Data
 const LINKS = [
-  { label: "Email",    href: "#" }, // TODO: mailto:your@email.com
-  { label: "GitHub",   href: "#" }, // TODO: https://github.com/yourusername
-  { label: "LinkedIn", href: "#" }, // TODO: https://linkedin.com/in/yourusername
+  { label: "Email",    href: "mailto:sheikhmdrakib.career@gmail.com" },
+  { label: "GitHub",   href: "https://github.com/sheikh-mohammad-rakib" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/sheikh-mohammad-rakib" },
 ];
 
 // ── Motion variants — preserved for eyebrow, subtext, links ──────────────────
