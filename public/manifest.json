@@ -1,0 +1,12 @@
+{
+  "name": "Sheikh Mohammad Rakib — Portfolio",
+  "short_name": "SMRakib",
+  "description": "Portfolio of Sheikh Mohammad Rakib — Full Stack Creative Developer building thoughtful digital experiences.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111111",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" }
+  ]
+}

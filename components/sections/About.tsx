@@ -84,8 +84,9 @@ export default function About() {
             <div className="border border-[#D8D8D4] aspect-square overflow-hidden bg-[#F0F0EC] relative">
               <Image
                 src="/images/avatar.png"
-                alt="Portrait of Sheikh Mohammad Rakib"
+                alt="Portrait of Sheikh Mohammad Rakib — Full Stack Creative Developer based in Bangladesh"
                 fill
+                priority
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
