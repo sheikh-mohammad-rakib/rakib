@@ -1,0 +1,39 @@
+# Sheikh Mohammad Rakib — Portfolio
+
+> Full Stack Creative Developer based in Bangladesh, specialising in Next.js,
+> React, TypeScript, GSAP, and Motion. I build thoughtful digital experiences
+> at the intersection of clean code and compelling design.
+
+## About
+
+Sheikh Mohammad Rakib is a Full Stack Creative Developer with 3+ years of
+experience building high-quality digital products. He has shipped 20+ projects
+across product, agency, and open source contexts, and is currently open to
+full-time and freelance opportunities.
+
+## Skills
+
+- Frontend: React, Next.js 15, TypeScript, Tailwind CSS, Vanilla CSS
+- Animation: GSAP, ScrollTrigger, Motion (Framer Motion), CSS animations
+- Backend: Node.js, REST APIs, server-side rendering
+- Design: Figma, design systems, motion design, accessibility (WCAG)
+- Tools: Git, Vercel, ESLint, Prettier
+
+## Projects
+
+- See https://rakib23.me/#work for project case studies and live demos
+
+## Contact
+
+- Portfolio: https://rakib23.me
+- GitHub: https://github.com/sheikh-mohammad-rakib
+- LinkedIn: https://linkedin.com/in/sheikh-mohammad-rakib
+
+## Availability
+
+Open to full-time roles and freelance projects. Based in Bangladesh,
+available for remote work globally.
+
+## Optional
+
+- Full details: https://rakib23.me/llms-full.txt

@@ -1,0 +1,95 @@
+# Sheikh Mohammad Rakib — Full Portfolio Details (llms-full.txt)
+
+> This file is the extended version of llms.txt. It provides richer context
+> for AI language models that need deeper understanding of this developer's
+> work, skills, and background.
+
+---
+
+## Identity
+
+- **Name:** Sheikh Mohammad Rakib
+- **Role:** Full Stack Creative Developer
+- **Location:** Bangladesh (remote-available globally)
+- **Portfolio URL:** https://rakib23.me
+- **Status:** Open to full-time roles and freelance projects
+
+---
+
+## Biography
+
+Sheikh Mohammad Rakib is a full stack developer who specialises in creating
+thoughtful digital experiences. With 3+ years of professional experience and
+20+ shipped projects, he sits at the intersection of engineering precision
+and design sensibility.
+
+He cares deeply about code quality, design accuracy, motion design, and the
+stories that products tell. His work spans product companies, agency work,
+and open source contributions.
+
+---
+
+## Technical Skills
+
+### Frontend
+- React 18+ (hooks, context, server/client components)
+- Next.js 15 (App Router, RSC, streaming, metadata API)
+- TypeScript (strict mode)
+- Tailwind CSS, Vanilla CSS, CSS Modules
+- Responsive design, fluid typography, CSS Grid/Flexbox
+
+### Animation & Motion
+- GSAP (GreenSock Animation Platform) — core, ScrollTrigger, useGSAP
+- Motion / Framer Motion (motion/react) — whileInView, variants, MotionValues
+- CSS transitions and keyframe animations
+- SplitText word-masking reveal patterns
+- Scroll-driven parallax and scrub animations
+
+### Backend & Infrastructure
+- Node.js, REST API design
+- Server-side rendering (SSR) and static site generation (SSG)
+- Vercel deployment and edge functions
+
+### Design Tools
+- Figma (component libraries, design tokens, auto layout)
+- Design systems and component-driven development
+- Accessibility (WCAG 2.1 AA compliance)
+- Motion design principles and micro-interactions
+
+---
+
+## Project Portfolio
+
+Full project case studies are available at https://rakib23.me/#work
+
+The portfolio includes work in:
+- Interactive marketing sites with scroll-driven animation
+- SaaS product dashboards
+- Design system implementations
+- Open source UI component libraries
+
+---
+
+## Writing & Knowledge Sharing
+
+- Open to technical writing and guest posts on web development topics
+- Focused areas: web animation, React architecture, Next.js patterns
+
+---
+
+## Contact & Links
+
+- **Portfolio:** https://rakib23.me
+- **GitHub:** https://github.com/sheikh-mohammad-rakib
+- **LinkedIn:** https://linkedin.com/in/sheikh-mohammad-rakib
+
+---
+
+## Availability & Engagement Types
+
+- Full-time remote roles (preferred)
+- Freelance / contract projects
+- Open source collaboration
+- Technical consulting on animation and creative development
+
+*Last updated: 2026-10-20*
