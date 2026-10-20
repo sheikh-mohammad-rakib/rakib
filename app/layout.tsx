@@ -6,19 +6,18 @@ import SmoothScroll from "@/components/providers/SmoothScroll";
 import PersonSchema from "@/components/seo/PersonSchema";
 
 // ─── Fonts ────────────────────────────────────────────────────────────────────
-// Playfair Display: display / hero headings and logotype only
+// Playfair Display & Inter are variable fonts — loading without fixed weight arrays
+// provides all weights (400–900) while generating a single clean font file query.
 const playfair = Playfair_Display({
   variable: "--font-serif",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  style: ["normal", "italic"],
+  display: "swap",
 });
 
-// Inter: all body text, labels, and UI controls
 const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  display: "swap",
 });
 
 // ─── Viewport ─────────────────────────────────────────────────────────────────
