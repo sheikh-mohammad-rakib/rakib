@@ -170,8 +170,6 @@ export default function Projects() {
   // Motion tilt owns rotateX + rotateY. Different properties — no conflict.
   useGSAP(
     () => {
-      gsap.set("[data-project-card]", { opacity: 0, y: 40 });
-
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -180,13 +178,17 @@ export default function Projects() {
         },
       });
 
-      tl.to("[data-project-card]", {
-        opacity: 1,
-        y: 0,
-        duration: 0.7,
-        ease: "power3.out",
-        stagger: 0.14,
-      });
+      tl.fromTo(
+        "[data-project-card]",
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          ease: "power3.out",
+          stagger: 0.14,
+        }
+      );
     },
     { scope: sectionRef }
   );

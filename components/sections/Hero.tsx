@@ -10,10 +10,11 @@ import { useRef, useCallback } from "react";
 import { motion, useScroll, useTransform, useSpring, useMotionValue, animate } from "motion/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { useGSAP } from "@gsap/react";
 
 // ── Register plugins once outside the component (gsap-react skill) ───────────
-gsap.registerPlugin(ScrollTrigger, useGSAP);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, useGSAP);
 
 // ── Placeholder data ──────────────────────────────────────────────────────────
 const EYEBROW    = "Full Stack Creative Developer";
@@ -107,6 +108,17 @@ function HoldCTA({ href, label }: { href: string; label: string }) {
       ease: "linear",
       onComplete: () => {
         // Navigate after full hold completes
+        if (href.startsWith("#")) {
+          const targetElem = document.querySelector(href);
+          if (targetElem) {
+            const smoother = ScrollSmoother.get();
+            if (smoother) {
+              smoother.scrollTo(targetElem, true);
+              history.pushState(null, "", href);
+              return;
+            }
+          }
+        }
         window.location.href = href;
       },
     });
