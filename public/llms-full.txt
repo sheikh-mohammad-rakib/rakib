@@ -60,7 +60,7 @@ and open source contributions.
 
 ## Project Portfolio
 
-Full project case studies are available at https://rakib23.me/#work
+Full project case studies are available at [rakib23.me/#work](https://rakib23.me/#work)
 
 The portfolio includes work in:
 - Interactive marketing sites with scroll-driven animation
@@ -79,9 +79,9 @@ The portfolio includes work in:
 
 ## Contact & Links
 
-- **Portfolio:** https://rakib23.me
-- **GitHub:** https://github.com/sheikh-mohammad-rakib
-- **LinkedIn:** https://linkedin.com/in/sheikh-mohammad-rakib
+- **Portfolio:** [rakib23.me](https://rakib23.me)
+- **GitHub:** [sheikh-mohammad-rakib](https://github.com/sheikh-mohammad-rakib)
+- **LinkedIn:** [Sheikh Mohammad Rakib](https://linkedin.com/in/sheikh-mohammad-rakib)
 
 ---
 

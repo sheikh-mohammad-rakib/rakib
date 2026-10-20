@@ -1,39 +1,20 @@
-# Sheikh Mohammad Rakib — Portfolio
+# Sheikh Mohammad Rakib
 
-> Full Stack Creative Developer based in Bangladesh, specialising in Next.js,
-> React, TypeScript, GSAP, and Motion. I build thoughtful digital experiences
-> at the intersection of clean code and compelling design.
+> Full Stack Creative Developer based in Bangladesh, specialising in Next.js, React, TypeScript, GSAP, and Motion. I build thoughtful digital experiences at the intersection of clean code and compelling design.
 
-## About
+Sheikh Mohammad Rakib is a full stack developer with 3+ years of experience building high-quality digital products. He has shipped 20+ projects across product, agency, and open source contexts, and is currently open to full-time and freelance opportunities.
 
-Sheikh Mohammad Rakib is a Full Stack Creative Developer with 3+ years of
-experience building high-quality digital products. He has shipped 20+ projects
-across product, agency, and open source contexts, and is currently open to
-full-time and freelance opportunities.
+## Portfolio & Work
 
-## Skills
+- [Selected Projects](https://rakib23.me/#work): Interactive case studies and production applications built with Next.js, React, GSAP, and Motion.
+- [About & Background](https://rakib23.me/#about): Experience, engineering philosophy, and technical skill set.
+- [Contact](https://rakib23.me/#contact): Direct contact channels for full-time roles, freelance projects, and consulting.
 
-- Frontend: React, Next.js 15, TypeScript, Tailwind CSS, Vanilla CSS
-- Animation: GSAP, ScrollTrigger, Motion (Framer Motion), CSS animations
-- Backend: Node.js, REST APIs, server-side rendering
-- Design: Figma, design systems, motion design, accessibility (WCAG)
-- Tools: Git, Vercel, ESLint, Prettier
+## Social & Code
 
-## Projects
-
-- See https://rakib23.me/#work for project case studies and live demos
-
-## Contact
-
-- Portfolio: https://rakib23.me
-- GitHub: https://github.com/sheikh-mohammad-rakib
-- LinkedIn: https://linkedin.com/in/sheikh-mohammad-rakib
-
-## Availability
-
-Open to full-time roles and freelance projects. Based in Bangladesh,
-available for remote work globally.
+- [GitHub Profile](https://github.com/sheikh-mohammad-rakib): Open source contributions, experiments, and code repositories.
+- [LinkedIn Profile](https://linkedin.com/in/sheikh-mohammad-rakib): Professional background, recommendations, and career history.
 
 ## Optional
 
-- Full details: https://rakib23.me/llms-full.txt
+- [Full Context & Extended Bio](https://rakib23.me/llms-full.txt): Complete developer profile with in-depth skills breakdown, project details, and architectural preferences for LLMs.
