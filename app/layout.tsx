@@ -38,38 +38,35 @@ export const metadata: Metadata = {
     canonical: "/",
   },
 
-  title: "Sheikh Mohammad Rakib — Full Stack Creative Developer",
+  title: "Sheikh Mohammad Rakib — Mechatronics & Industrial Engineering Student",
   description:
-    "Portfolio of Sheikh Mohammad Rakib — a Full Stack Creative Developer who builds thoughtful digital experiences at the intersection of clean code and compelling design. Based in Bangladesh. Available for remote work.",
+    "Portfolio of Sheikh Mohammad Rakib — Mechatronics and Industrial Engineering student at CUET bridging low-level edge hardware with high-level software orchestration. Skilled in ROS 2, IIoT, control systems, and full-stack development.",
 
   keywords: [
-    // Core role keywords
-    "Full Stack Developer",
-    "Creative Developer",
-    "Frontend Developer Bangladesh",
-    "Web Developer for hire",
-    // Tech stack
-    "Next.js developer",
-    "React developer",
-    "TypeScript developer",
-    "GSAP animation developer",
-    "Motion Framer Motion developer",
-    // Niche / differentiator
-    "web animation developer",
-    "interactive portfolio",
-    "creative web development",
-    "motion design developer",
-    "scroll animation developer",
-    // Portfolio / hire intent
-    "hire full stack developer",
-    "freelance web developer Bangladesh",
-    "creative developer portfolio",
-    // General
+    // Core engineering & robotics
+    "Mechatronics Engineering",
+    "Industrial Engineering",
+    "Robotics Engineer",
+    "ROS 2 Developer",
+    "Control Systems",
+    "IIoT and Edge Computing",
+    "CUET Mechatronics",
+    // Hardware & Embedded
+    "ESP32",
+    "Arduino",
+    "Sensor Interfacing",
+    "Gazebo Simulation",
+    // Software & AI
+    "Python",
+    "C++",
+    "Machine Learning",
+    "Scikit-learn",
     "Next.js",
-    "React",
-    "GSAP",
-    "Motion",
-    "Portfolio",
+    "Prisma",
+    "TypeScript",
+    // Location & Intent
+    "Sheikh Mohammad Rakib",
+    "Chattogram Bangladesh",
   ],
 
   authors: [{ name: "Sheikh Mohammad Rakib", url: "https://rakib23.me" }],
@@ -78,9 +75,9 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 
   openGraph: {
-    title: "Sheikh Mohammad Rakib — Full Stack Creative Developer",
+    title: "Sheikh Mohammad Rakib — Mechatronics & Industrial Engineering Student",
     description:
-      "Portfolio of Sheikh Mohammad Rakib — a Full Stack Creative Developer who builds thoughtful digital experiences at the intersection of clean code and compelling design.",
+      "Portfolio of Sheikh Mohammad Rakib — Mechatronics and Industrial Engineering student at CUET bridging low-level edge hardware with high-level software orchestration.",
     url: "https://rakib23.me",
     siteName: "Sheikh Mohammad Rakib",
     images: [
@@ -88,7 +85,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Sheikh Mohammad Rakib — Full Stack Creative Developer",
+        alt: "Sheikh Mohammad Rakib — Mechatronics & Industrial Engineering Student",
       },
     ],
     locale: "en_US",
@@ -97,9 +94,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Sheikh Mohammad Rakib — Full Stack Creative Developer",
+    title: "Sheikh Mohammad Rakib — Mechatronics & Industrial Engineering Student",
     description:
-      "Full Stack Creative Developer building experiences at the intersection of clean code and compelling design. Based in Bangladesh.",
+      "Mechatronics & Industrial Engineering student at CUET skilled in control theory, robotics, IIoT, and software systems.",
     images: ["/og-image.jpg"],
     // creator: "@your_twitter_handle", // ← uncomment and replace when you have a handle
   },

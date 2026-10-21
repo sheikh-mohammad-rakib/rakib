@@ -1,20 +1,22 @@
 # Sheikh Mohammad Rakib
 
-> Full Stack Creative Developer based in Bangladesh, specialising in Next.js, React, TypeScript, GSAP, and Motion. I build thoughtful digital experiences at the intersection of clean code and compelling design.
+> Mechatronics & Industrial Engineering Student at Chittagong University of Engineering and Technology (CUET), Chattogram, Bangladesh. Skilled at bridging low-level edge hardware with high-level software orchestration.
 
-Sheikh Mohammad Rakib is a full stack developer with 3+ years of experience building high-quality digital products. He has shipped 20+ projects across product, agency, and open source contexts, and is currently open to full-time and freelance opportunities.
+Mechatronics and Industrial Engineering student with a strong foundation in control theory, robotics, and IIoT. Applies sharp debugging instincts and systems-level thinking to the design, integration, and optimization of automated mechatronic platforms, driving improvements in process efficiency.
 
-## Portfolio & Work
+## Portfolio & Sections
 
-- [Selected Projects](https://rakib23.me/#work): Interactive case studies and production applications built with Next.js, React, GSAP, and Motion.
-- [About & Background](https://rakib23.me/#about): Experience, engineering philosophy, and technical skill set.
-- [Contact](https://rakib23.me/#contact): Direct contact channels for full-time roles, freelance projects, and consulting.
+- [Featured Projects](https://rakib23.me/#work): Sim-to-real RL on UR3 (ROS 2/Gazebo), IIoT edge telemetry architecture (ESP32/Prisma), and ML mechanical fault detection.
+- [Academic Systems](https://rakib23.me/#work): 4-DOF pick & place robotic arm and automated bottle filling conveyor systems.
+- [Industrial Experience](https://rakib23.me/#experience): Attachment trainee at Transcom Beverages Limited (PLC, VFD, SCADA bottling lines) & Shikalbaha 225 MW CCPP.
+- [Education & Credentials](https://rakib23.me/#education): BSc in Mechatronics & Industrial Engineering at CUET, DataCamp Machine Learning Engineer tracks, and Hack Days CUET winner.
+- [Technical Skills](https://rakib23.me/#skills): ROS 2, Gazebo, Control Theory, Kinematics, Arduino, ESP32, Python, C++, MATLAB, Scikit-learn, Next.js.
+- [Contact](https://rakib23.me/#contact): Direct contact channels for engineering roles, research collaboration, and consulting.
 
-## Social & Code
+## Direct Contact & Links
 
-- [GitHub Profile](https://github.com/sheikh-mohammad-rakib): Open source contributions, experiments, and code repositories.
-- [LinkedIn Profile](https://linkedin.com/in/sheikh-mohammad-rakib): Professional background, recommendations, and career history.
+- Email: sheikhmdrakib.career@gmail.com
+- Phone: +880 1521-705856
+- [GitHub Profile](https://github.com/sheikh-mohammad-rakib)
+- [LinkedIn Profile](https://linkedin.com/in/sheikh-mohammad-rakib)
 
-## Optional
-
-- [Full Context & Extended Bio](https://rakib23.me/llms-full.txt): Complete developer profile with in-depth skills breakdown, project details, and architectural preferences for LLMs.
