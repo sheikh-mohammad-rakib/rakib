@@ -21,36 +21,55 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-// ── Placeholder data ──────────────────────────────────────────────────────────
-const SECTION_LABEL = "Selected Work";
+// ── Portfolio data ────────────────────────────────────────────────────────────
+const SECTION_LABEL = "Featured Projects";
 
 const PROJECTS = [
   {
     id:          1,
     number:      "01",
-    title:       "Nexus Dashboard",
-    description: "A real-time analytics platform for SaaS teams. Built with Next.js, Prisma, and PostgreSQL — featuring live data streams and role-based access control.",
-    tags:        ["Next.js", "TypeScript", "PostgreSQL"],
+    title:       "RL Obstacle Avoidance — UR3",
+    description: "Bachelor's thesis. Architected a distributed ROS 2 node ecosystem managing continuous joint-space telemetry, integrating custom Python publishers to bridge Gazebo with a PPO training loop. Enforced dynamic safety constraints and executed successful sim-to-real policy transfer to physical UR3 hardware via tf2 and ros2_control.",
+    tags:        ["ROS 2", "Gazebo", "Python", "PPO", "tf2", "ros2_control", "UR3"],
     image:       "/images/projects/project-1.png",
-    href:        "#",
+    href:        "https://github.com/sheikh-mohammad-rakib",
   },
   {
     id:          2,
     number:      "02",
-    title:       "Bloom Commerce",
-    description: "A full-stack e-commerce storefront with custom cart logic, Stripe integration, and a headless CMS for product management.",
-    tags:        ["React", "Node.js", "Stripe"],
+    title:       "IIoT Telemetry & Monitoring System",
+    description: "Designed a robust, full-stack Industrial IoT (IIoT) architecture monitoring and logging time-series telemetry (temperature, motor RPM) from ESP32 edge devices. Engineered scalable Prisma schemas streaming into NeonDB with secure role-based access control (RBAC).",
+    tags:        ["ESP32", "Next.js", "Prisma", "NeonDB", "RBAC", "IoT"],
     image:       "/images/projects/project-2.png",
-    href:        "#",
+    href:        "https://github.com/sheikh-mohammad-rakib",
   },
   {
     id:          3,
     number:      "03",
-    title:       "Canvas Agency",
-    description: "A motion-rich marketing site for a creative studio. Built with GSAP ScrollTrigger for scroll-driven storytelling and Motion for micro-interactions.",
-    tags:        ["GSAP", "Motion", "Next.js"],
+    title:       "Predictive Maintenance: ML Fault Detection",
+    description: "Engineered an end-to-end machine learning pipeline via Scikit-learn to classify complex mechanical fault states from raw industrial sensor datasets. Applied signal preprocessing and spectral feature extraction to isolate early-stage mechanical degradation.",
+    tags:        ["Scikit-learn", "Pandas", "Python", "Signal Processing"],
     image:       "/images/projects/project-3.png",
-    href:        "#",
+    href:        "https://github.com/sheikh-mohammad-rakib",
+  },
+];
+
+const ACADEMIC_PROJECTS = [
+  {
+    id:          4,
+    number:      "04",
+    title:       "4-DOF Pick and Place Robotic Manipulator",
+    description: "Engineered a 4-degree-of-freedom robotic arm for automated sorting, integrating custom structural components with high-torque servo actuation. Programmed inverse kinematics in C++ (Arduino) for precise spatial positioning and interfaced optical proximity sensors for autonomous object detection.",
+    tags:        ["C++", "Arduino", "Inverse Kinematics", "Servo Actuation", "Robotics"],
+    href:        "https://github.com/sheikh-mohammad-rakib",
+  },
+  {
+    id:          5,
+    number:      "05",
+    title:       "Automated Liquid Filling & Conveyor System",
+    description: "Designed a continuous process automation system for bottle filling, synchronizing a DC motor-driven conveyor with optical sensors for position detection. Programmed sequential control logic via microcontrollers to actuate relays and solenoid valves with accurate dispensing.",
+    tags:        ["Microcontrollers", "Relay Logic", "Solenoid Valves", "Automation"],
+    href:        "https://github.com/sheikh-mohammad-rakib",
   },
 ];
 
@@ -248,6 +267,8 @@ export default function Projects() {
                   </div>
                   <a
                     href={project.href}
+                    target={project.href.startsWith("http") ? "_blank" : undefined}
+                    rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="self-start text-xs border border-[#D8D8D4] text-[#555550] px-4 py-2 hover:border-[#1A4A2E] hover:text-[#1A4A2E] transition-colors"
                   >
                     View project -&gt;
@@ -256,6 +277,58 @@ export default function Projects() {
               </TiltCard>
             </div>
           ))}
+        </div>
+
+        {/* Academic Projects Subsection */}
+        <div className="mt-20 pt-16 border-t border-[#D8D8D4]">
+          <p className="text-xs font-sans font-medium uppercase tracking-widest text-[#555550] mb-10">
+            Academic & Mechatronic Systems
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#D8D8D4] border border-[#D8D8D4]">
+            {ACADEMIC_PROJECTS.map((project) => (
+              <div
+                key={project.id}
+                data-project-card
+              >
+                <TiltCard>
+                  {/* Card header */}
+                  <div className="px-5 py-4 border-b border-[#D8D8D4] flex items-center justify-between">
+                    <span className="text-xs font-mono text-[#D8D8D4]">
+                      {project.number}
+                    </span>
+                    <span className="text-sm font-medium text-[#111111]">
+                      {project.title}
+                    </span>
+                  </div>
+
+                  {/* Card body */}
+                  <div className="px-5 py-6 flex flex-col gap-5 flex-1">
+                    <p className="text-sm text-[#555550] leading-relaxed flex-1">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs text-[#555550] border border-[#D8D8D4] px-2 py-1"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <a
+                      href={project.href}
+                      target={project.href.startsWith("http") ? "_blank" : undefined}
+                      rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="self-start text-xs border border-[#D8D8D4] text-[#555550] px-4 py-2 hover:border-[#1A4A2E] hover:text-[#1A4A2E] transition-colors"
+                    >
+                      View code -&gt;
+                    </a>
+                  </div>
+                </TiltCard>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>

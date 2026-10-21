@@ -17,17 +17,18 @@
 import { useRef } from "react";
 import { motion, AnimatePresence, useScroll, useTransform, useSpring, useMotionTemplate } from "motion/react";
 
-// ── Placeholder data ──────────────────────────────────────────────────────────
+// ── Portfolio data ────────────────────────────────────────────────────────────
 const EYEBROW  = "Get In Touch";
 const HEADING  = "Let's build something.";
 const SUBTEXT  =
-  "Whether you have a project in mind or just want to say hi — my inbox is always open.";
+  "Whether you have an industrial automation project, research collaboration, or just want to connect — my inbox is always open.";
 
-// Social Links Data
+// Social & Direct Links
 const LINKS = [
   { label: "Email",    href: "mailto:sheikhmdrakib.career@gmail.com" },
-  { label: "GitHub",   href: "https://github.com/sheikh-mohammad-rakib" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/sheikh-mohammad-rakib" },
+  { label: "GitHub",   href: "https://github.com/sheikh-mohammad-rakib" },
+  { label: "+880 1521-705856", href: "tel:+8801521705856" },
 ];
 
 // ── Motion variants — preserved for eyebrow, subtext, links ──────────────────

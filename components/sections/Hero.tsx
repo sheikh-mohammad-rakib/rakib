@@ -16,12 +16,12 @@ import { useGSAP } from "@gsap/react";
 // ── Register plugins once outside the component (gsap-react skill) ───────────
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, useGSAP);
 
-// ── Placeholder data ──────────────────────────────────────────────────────────
-const EYEBROW    = "Full Stack Creative Developer";
+// ── Portfolio data ────────────────────────────────────────────────────────────
+const EYEBROW    = "Mechatronics & Industrial Engineering Student";
 const NAME_LINE1 = "Sheikh Mohammad";
 const NAME_LINE2 = "Rakib.";
 const SUBHEADING =
-  "I design and build products that live at the intersection of clean code and compelling experience.";
+  "Mechatronics and Industrial Engineering student skilled at bridging low-level edge hardware with high-level software orchestration — designing, integrating, and optimising automated mechatronic platforms.";
 const CTA_PRIMARY   = "View My Work";
 const CTA_SECONDARY = "Get in touch";
 

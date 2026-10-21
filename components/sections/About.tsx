@@ -4,17 +4,18 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 
-// ── Placeholder data ──────────────────────────────────────────────────────────
+// ── Portfolio data ────────────────────────────────────────────────────────────
 const EYEBROW    = "About";
-const PULL_QUOTE = "I build things for the web — from pixel to server.";
+const PULL_QUOTE =
+  "Bridging low-level edge hardware with high-level software orchestration.";
 const BIO = [
-  "Based in Bangladesh, I'm a full stack developer who specialises in creating thoughtful digital experiences. I care deeply about code quality, design precision, and the stories that products tell.",
-  "When I'm not in the editor, I'm exploring motion design, contributing to open source, or diving into a design system rabbit hole.",
+  "Based in Chattogram, Bangladesh, I'm a Mechatronics and Industrial Engineering student at CUET with a strong foundation in control theory, robotics, and IIoT. I apply sharp debugging instincts and systems-level thinking to the design, integration, and optimisation of automated mechatronic platforms.",
+  "When I'm not in the lab, I'm building full-stack web tools, training RL agents in simulation, or exploring the intersection of ML and industrial fault detection.",
 ];
 const STATS = [
-  { label: "Experience",        value: "3+ Years"    },
-  { label: "Projects Shipped",  value: "20+"         },
-  { label: "Currently",         value: "Open to work" },
+  { label: "University",   value: "CUET — Batch 2022" },
+  { label: "Location",     value: "Chattogram, Bangladesh" },
+  { label: "Currently",    value: "Open to opportunities" },
 ];
 
 // ── Motion variant — subtle fade-up (Motion docs: y:8 is the editorial amount)
@@ -84,7 +85,7 @@ export default function About() {
             <div className="border border-[#D8D8D4] aspect-square overflow-hidden bg-[#F0F0EC] relative">
               <Image
                 src="/images/avatar.png"
-                alt="Portrait of Sheikh Mohammad Rakib — Full Stack Creative Developer based in Bangladesh"
+                alt="Portrait of Sheikh Mohammad Rakib — Mechatronics & Industrial Engineering Student at CUET"
                 fill
                 priority
                 className="object-cover"

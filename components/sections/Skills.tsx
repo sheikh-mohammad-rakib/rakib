@@ -11,14 +11,70 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-// ── Placeholder data ──────────────────────────────────────────────────────────
-const SECTION_LABEL = "Skills & Tools";
+// ── Portfolio data ────────────────────────────────────────────────────────────
+const SECTION_LABEL = "Technical Skills";
 
-const SKILLS = [
-  "React", "Next.js", "TypeScript", "Node.js",
-  "PostgreSQL", "Prisma", "Tailwind CSS", "GSAP",
-  "Motion", "Figma", "REST APIs", "GraphQL",
-  "Docker", "Git", "Vercel", "Linux",
+interface SkillCategory {
+  category: string;
+  items: string[];
+}
+
+const SKILL_CATEGORIES: SkillCategory[] = [
+  {
+    category: "Industrial Controls & Robotics",
+    items: [
+      "ROS 2",
+      "Gazebo",
+      "Control Theory",
+      "Kinematics & Dynamics",
+      "PID Controllers",
+    ],
+  },
+  {
+    category: "IIoT & Edge Computing",
+    items: [
+      "Arduino",
+      "ESP32",
+      "Sensor Interfacing (I2C/SPI)",
+      "Real-Time Telemetry",
+    ],
+  },
+  {
+    category: "Programming Languages",
+    items: [
+      "Python",
+      "C++",
+      "MATLAB",
+      "SQL",
+      "JavaScript",
+      "TypeScript",
+    ],
+  },
+  {
+    category: "DevOps & Deployment",
+    items: [
+      "Git",
+      "Linux",
+      "Docker",
+    ],
+  },
+  {
+    category: "Web Architecture & ML Frameworks",
+    items: [
+      "Scikit-learn",
+      "Pandas",
+      "Next.js",
+      "Prisma",
+    ],
+  },
+  {
+    category: "Professional Skills",
+    items: [
+      "Cross-Functional Collaboration",
+      "Multidisciplinary Coordination",
+      "Technical Communication",
+    ],
+  },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -41,7 +97,7 @@ export default function Skills() {
             y: 0,
             duration: 0.5,
             ease: "power2.out",
-            stagger: 0.06,
+            stagger: 0.04,
             overwrite: true,  // gsap-core: prevent conflicts
           });
         },
@@ -51,7 +107,7 @@ export default function Skills() {
             y: 12,
             duration: 0.3,
             ease: "power2.in",
-            stagger: 0.03,
+            stagger: 0.02,
             overwrite: true,
           });
         },
@@ -74,16 +130,27 @@ export default function Skills() {
           {SECTION_LABEL}
         </p>
 
-        {/* Skill tags — GSAP targets [data-skill] via batch */}
-        <div className="flex flex-wrap gap-3">
-          {SKILLS.map((skill) => (
-            <span
-              key={skill}
-              data-skill
-              className="border border-[#D8D8D4] text-[#555550] px-4 py-2 text-sm hover:border-[#1A4A2E] hover:text-[#1A4A2E] transition-colors cursor-default"
-            >
-              {skill}
-            </span>
+        {/* Editorial tiled grid — Design.md §4 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#D8D8D4] border border-[#D8D8D4]">
+          {SKILL_CATEGORIES.map((group) => (
+            <div key={group.category} className="bg-[#F8F8F6] flex flex-col">
+              <div className="px-5 py-3.5 border-b border-[#D8D8D4] flex items-center justify-between">
+                <span className="text-xs font-medium uppercase tracking-widest text-[#555550]">
+                  {group.category}
+                </span>
+              </div>
+              <div className="p-5 flex flex-wrap gap-2 flex-1">
+                {group.items.map((skill) => (
+                  <span
+                    key={skill}
+                    data-skill
+                    className="border border-[#D8D8D4] text-[#555550] px-3 py-1.5 text-xs hover:border-[#1A4A2E] hover:text-[#1A4A2E] transition-colors cursor-default"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
 
