@@ -5,7 +5,9 @@
 import Footer         from "@/components/layout/Footer";
 import Hero           from "@/components/sections/Hero";
 import About          from "@/components/sections/About";
+import Education      from "@/components/sections/Education";
 import Skills         from "@/components/sections/Skills";
+import Experience     from "@/components/sections/Experience";
 import Projects       from "@/components/sections/Projects";
 import Contact        from "@/components/sections/Contact";
 import SectionDivider from "@/components/ui/SectionDivider";
@@ -24,12 +26,22 @@ export default function Home() {
         <About />
 
         {/* Full-width horizontal rule draws in after About */}
-        <SectionDivider variant="line" delay={0.2} />
+        <SectionDivider variant="line" delay={0.15} />
+
+        <Education />
+
+        {/* Full-width rule before Skills */}
+        <SectionDivider variant="line" delay={0.15} />
 
         <Skills />
 
+        {/* Full-width rule before Experience */}
+        <SectionDivider variant="line" delay={0.15} />
+
+        <Experience />
+
         {/* Full-width rule before Projects */}
-        <SectionDivider variant="line" delay={0.1} />
+        <SectionDivider variant="line" delay={0.15} />
 
         <Projects />
 

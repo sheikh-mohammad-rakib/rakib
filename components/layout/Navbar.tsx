@@ -19,9 +19,12 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 const LOGOTYPE = "Rakib";
 
 const NAV_LINKS = [
-  { label: "Work",    href: "#work"    },
-  { label: "About",   href: "#about"   },
-  { label: "Contact", href: "#contact" },
+  { label: "About",      href: "#about"      },
+  { label: "Education",  href: "#education"  },
+  { label: "Skills",     href: "#skills"     },
+  { label: "Experience", href: "#experience" },
+  { label: "Work",       href: "#work"       },
+  { label: "Contact",    href: "#contact"    },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
