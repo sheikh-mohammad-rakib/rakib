@@ -13,7 +13,7 @@ const BIO = [
   "When I'm not in the lab, I'm building full-stack web tools, training RL agents in simulation, or exploring the intersection of ML and industrial fault detection.",
 ];
 const STATS = [
-  { label: "University",   value: "CUET — Batch 2022" },
+  { label: "University",   value: "CUET — Batch 2020" },
   { label: "Location",     value: "Chattogram, Bangladesh" },
   { label: "Currently",    value: "Open to opportunities" },
 ];
