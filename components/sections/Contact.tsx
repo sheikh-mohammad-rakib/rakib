@@ -14,7 +14,7 @@
 //   - MotionValues only used in useTransform/style, never read in render
 //   - Import from motion/react
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useTransform, useSpring, useMotionTemplate } from "motion/react";
 
 // ── Portfolio data ────────────────────────────────────────────────────────────
@@ -23,13 +23,77 @@ const HEADING  = "Let's build something.";
 const SUBTEXT  =
   "Whether you have an industrial automation project, research collaboration, or just want to connect — my inbox is always open.";
 
-// Social & Direct Links
-const LINKS = [
-  { label: "Email",    href: "mailto:sheikhmdrakib.career@gmail.com" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/sheikh-mohammad-rakib" },
-  { label: "GitHub",   href: "https://github.com/sheikh-mohammad-rakib" },
-  { label: "+880 1521-705856", href: "tel:+8801521705856" },
+// Social & Direct Links — email and phone obfuscated to prevent bot harvesting
+interface ContactLinkItem {
+  label: string;
+  href?: string;
+  encodedHref?: string;
+  encodedLabel?: string;
+  isExternal?: boolean;
+}
+
+const LINKS: ContactLinkItem[] = [
+  {
+    label: "Email",
+    // Base64 of mailto:sheikhmdrakib.career@gmail.com
+    encodedHref: "bWFpbHRvOnNoZWlraG1kcmFraWIuY2FyZWVyQGdtYWlsLmNvbQ==",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/sheikh-mohammad-rakib",
+    isExternal: true,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/sheikh-mohammad-rakib",
+    isExternal: true,
+  },
+  {
+    label: "Phone",
+    // Base64 of tel:+8801521705856 and +880 1521-705856
+    encodedHref: "dGVsOis4ODAxNTIxNzA1ODU2",
+    encodedLabel: "Kzg4MCAxNTIxLTcwNTg1Ng==",
+  },
 ];
+
+function ContactLink({ item }: { item: ContactLinkItem }) {
+  const [href, setHref] = useState<string>(item.href ?? "#");
+  const [label, setLabel] = useState<string>(item.label);
+
+  // Client-side hydration: decode real contact info so static HTML contains no raw addresses
+  useEffect(() => {
+    if (item.encodedHref) {
+      setHref(atob(item.encodedHref));
+    }
+    if (item.encodedLabel) {
+      setLabel(atob(item.encodedLabel));
+    }
+  }, [item.encodedHref, item.encodedLabel]);
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (item.encodedHref && href === "#") {
+      e.preventDefault();
+      const decoded = atob(item.encodedHref);
+      setHref(decoded);
+      window.location.href = decoded;
+    }
+  };
+
+  return (
+    <motion.a
+      href={href}
+      onClick={handleClick}
+      target={item.isExternal ? "_blank" : undefined}
+      rel={item.isExternal ? "noopener noreferrer" : undefined}
+      className="border border-[#D8D8D4] text-[#555550] px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm text-center sm:text-left transition-colors"
+      whileHover={{ borderColor: "#1A4A2E", color: "#1A4A2E" }}
+      whileTap={{ scale: 0.97 }}
+      transition={{ duration: 0.2 }}
+    >
+      {label} -&gt;
+    </motion.a>
+  );
+}
 
 // ── Motion variants — preserved for eyebrow, subtext, links ──────────────────
 const containerVariants = {
@@ -130,19 +194,8 @@ export default function Contact() {
 
             {/* Social links */}
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-4">
-              {LINKS.map(({ label, href }) => (
-                <motion.a
-                  key={label}
-                  href={href}
-                  target={href !== "#" && href.startsWith("http") ? "_blank" : undefined}
-                  rel={href !== "#" && href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="border border-[#D8D8D4] text-[#555550] px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm text-center sm:text-left transition-colors"
-                  whileHover={{ borderColor: "#1A4A2E", color: "#1A4A2E" }}
-                  whileTap={{ scale: 0.97 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {label} -&gt;
-                </motion.a>
+              {LINKS.map((item) => (
+                <ContactLink key={item.label} item={item} />
               ))}
             </motion.div>
 
