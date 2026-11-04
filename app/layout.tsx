@@ -71,6 +71,17 @@ export const metadata: Metadata = {
 
   authors: [{ name: "Sheikh Mohammad Rakib", url: "https://rakib23.me" }],
 
+  // Favicon & Touch Icons
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+
   // PWA / browser chrome
   manifest: "/manifest.json",
 
