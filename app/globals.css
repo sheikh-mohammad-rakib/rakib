@@ -135,6 +135,10 @@
     @apply border-border outline-ring/50;
     box-sizing: border-box;
   }
+  html {
+    @apply font-sans;
+    overflow-x: hidden;
+  }
   body {
     @apply bg-background text-foreground;
     /* Light mode: use editorial canvas */
@@ -143,9 +147,8 @@
     font-family: var(--font-sans), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  html {
-    @apply font-sans;
+    overflow-x: hidden;
+    width: 100%;
   }
   /* All links are unstyled by default; color applied contextually */
   a {

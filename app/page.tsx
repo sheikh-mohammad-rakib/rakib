@@ -19,7 +19,7 @@ export default function Home() {
         <Hero />
 
         {/* Bracket mark: top-left accent that draws in as About enters */}
-        <div className="px-8 md:px-16 pt-16 -mb-8">
+        <div className="px-5 sm:px-8 md:px-16 pt-16 -mb-8">
           <SectionDivider variant="bracket" delay={0.1} />
         </div>
 
@@ -46,7 +46,7 @@ export default function Home() {
         <Projects />
 
         {/* Corner closing mark — bottom-right, after Projects */}
-        <div className="px-8 md:px-16 pb-8 flex justify-end -mt-8">
+        <div className="px-5 sm:px-8 md:px-16 pb-8 flex justify-end -mt-8">
           <SectionDivider variant="corner" delay={0.1} />
         </div>
 

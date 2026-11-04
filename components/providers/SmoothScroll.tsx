@@ -23,7 +23,8 @@ export default function SmoothScroll({
       const smoother = ScrollSmoother.create({
         wrapper: wrapper.current,
         content: content.current,
-        smooth: 1.5,
+        smooth: 1.2,
+        smoothTouch: 0.1, // Responsive touch response on mobile & touch tablets
         effects: true,
       });
 
