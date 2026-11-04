@@ -62,13 +62,13 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="px-8 md:px-16 py-24 md:py-32 border-b border-[#D8D8D4]"
+      className="px-5 sm:px-8 md:px-16 py-16 sm:py-24 md:py-32 border-b border-[#D8D8D4]"
     >
       <div className="max-w-7xl mx-auto">
 
         {/* Section label */}
         <motion.p
-          className="text-xs font-sans font-medium uppercase tracking-widest text-[#555550] mb-14"
+          className="text-xs font-sans font-medium uppercase tracking-widest text-[#555550] mb-8 sm:mb-14"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -79,7 +79,7 @@ export default function Experience() {
 
         {/* Experiences list */}
         <motion.div
-          className="flex flex-col gap-8"
+          className="flex flex-col gap-6 sm:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -92,8 +92,8 @@ export default function Experience() {
               className="border border-[#D8D8D4] bg-[#F8F8F6]"
             >
               {/* Header */}
-              <div className="px-6 py-4 border-b border-[#D8D8D4] flex flex-col md:flex-row md:items-center justify-between gap-3">
-                <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-3">
+              <div className="px-4 sm:px-6 py-3.5 sm:py-4 border-b border-[#D8D8D4] flex flex-col md:flex-row md:items-center justify-between gap-2.5 sm:gap-3">
+                <div className="flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-3">
                   <h3 className="text-base font-medium text-[#111111]">
                     {item.role}
                   </h3>
@@ -102,15 +102,15 @@ export default function Experience() {
                     {item.org}
                   </p>
                 </div>
-                <span className="self-start md:self-auto text-xs font-mono text-[#555550] border border-[#D8D8D4] px-3 py-1 bg-transparent">
+                <span className="self-start md:self-auto text-xs font-mono text-[#555550] border border-[#D8D8D4] px-2.5 sm:px-3 py-1 bg-transparent">
                   {item.period}
                 </span>
               </div>
 
               {/* Bullet points */}
-              <div className="p-6 flex flex-col gap-4">
+              <div className="p-4 sm:p-6 flex flex-col gap-3 sm:gap-4">
                 {item.bullets.map((bullet, idx) => (
-                  <div key={idx} className="flex items-start gap-4">
+                  <div key={idx} className="flex items-start gap-3 sm:gap-4">
                     <span
                       aria-hidden="true"
                       className="text-xs text-[#1A4A2E] mt-1 shrink-0 font-mono"

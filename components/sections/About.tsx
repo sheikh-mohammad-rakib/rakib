@@ -34,13 +34,13 @@ export default function About() {
   return (
     <section
       id="about"
-      className="px-8 md:px-16 py-24 md:py-32 border-b border-[#D8D8D4]"
+      className="px-5 sm:px-8 md:px-16 py-16 sm:py-24 md:py-32 border-b border-[#D8D8D4]"
     >
       <div className="max-w-7xl mx-auto">
 
         {/* Eyebrow */}
         <motion.p
-          className="text-xs font-sans font-medium uppercase tracking-widest text-[#555550] mb-14"
+          className="text-xs font-sans font-medium uppercase tracking-widest text-[#555550] mb-8 sm:mb-14"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -50,7 +50,7 @@ export default function About() {
         </motion.p>
 
         {/* Two-column layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-16 md:gap-24 items-start">
 
           {/* Left: text — fades up slightly delayed */}
           <motion.div
@@ -60,12 +60,12 @@ export default function About() {
             viewport={{ once: false, margin: "-80px" }}
             transition={{ delay: 0.1 }}
           >
-            <h2 className="font-serif text-3xl md:text-4xl font-medium italic text-[#111111] leading-[1.2] mb-8 border-b border-[#D8D8D4] pb-8">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-medium italic text-[#111111] leading-[1.25] mb-6 sm:mb-8 border-b border-[#D8D8D4] pb-6 sm:pb-8">
               &ldquo;{PULL_QUOTE}&rdquo;
             </h2>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-4 sm:gap-5">
               {BIO.map((para, i) => (
-                <p key={i} className="text-base text-[#555550] leading-relaxed">
+                <p key={i} className="text-sm sm:text-base text-[#555550] leading-relaxed">
                   {para}
                 </p>
               ))}
@@ -74,7 +74,7 @@ export default function About() {
 
           {/* Right: avatar + stats — fades up with more delay */}
           <motion.div
-            className="flex flex-col gap-8"
+            className="flex flex-col gap-6 sm:gap-8"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -82,7 +82,7 @@ export default function About() {
             transition={{ delay: 0.22 }}
           >
             {/* Avatar */}
-            <div className="border border-[#D8D8D4] aspect-square overflow-hidden bg-[#F0F0EC] relative">
+            <div className="border border-[#D8D8D4] aspect-square overflow-hidden bg-[#F0F0EC] relative max-w-md mx-auto md:max-w-none w-full">
               <Image
                 src="/images/avatar.png"
                 alt="Portrait of Sheikh Mohammad Rakib — Mechatronics & Industrial Engineering Student at CUET"
@@ -95,7 +95,7 @@ export default function About() {
 
             {/* Stats panel */}
             <div className="border border-[#D8D8D4]">
-              <div className="px-5 py-3 border-b border-[#D8D8D4]">
+              <div className="px-4 sm:px-5 py-3 border-b border-[#D8D8D4]">
                 <span className="text-xs font-medium uppercase tracking-widest text-[#555550]">
                   At a Glance
                 </span>
@@ -103,7 +103,7 @@ export default function About() {
               {STATS.map(({ label, value }, i) => (
                 <div
                   key={label}
-                  className={`flex items-center justify-between px-5 py-4 ${
+                  className={`flex flex-col sm:flex-row sm:items-center justify-between px-4 sm:px-5 py-3 sm:py-4 gap-1 sm:gap-4 ${
                     i < STATS.length - 1 ? "border-b border-[#D8D8D4]" : ""
                   }`}
                 >

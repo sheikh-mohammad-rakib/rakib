@@ -83,7 +83,7 @@ function FillHeading({ text }: { text: string }) {
         color: "transparent",
         WebkitTextFillColor: "transparent",
       }}
-      className="font-serif text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.05] tracking-tight mb-8 max-w-3xl"
+      className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.1] tracking-tight mb-6 sm:mb-8 max-w-3xl"
     >
       {text}
     </motion.h2>
@@ -97,7 +97,7 @@ export default function Contact() {
     <AnimatePresence>
       <section
         id="contact"
-        className="px-8 md:px-16 py-24 md:py-32 border-b border-[#D8D8D4]"
+        className="px-5 sm:px-8 md:px-16 py-16 sm:py-24 md:py-32 border-b border-[#D8D8D4]"
       >
         <div className="max-w-7xl mx-auto">
 
@@ -111,7 +111,7 @@ export default function Contact() {
             {/* Eyebrow */}
             <motion.p
               variants={itemVariants}
-              className="text-xs font-sans font-medium uppercase tracking-widest text-[#1A4A2E] mb-8"
+              className="text-xs font-sans font-medium uppercase tracking-widest text-[#1A4A2E] mb-4 sm:mb-8"
             >
               {EYEBROW}
             </motion.p>
@@ -123,20 +123,20 @@ export default function Contact() {
             {/* Subtext */}
             <motion.p
               variants={itemVariants}
-              className="text-base text-[#555550] leading-relaxed max-w-lg mb-14"
+              className="text-sm sm:text-base text-[#555550] leading-relaxed max-w-lg mb-8 sm:mb-14"
             >
               {SUBTEXT}
             </motion.p>
 
             {/* Social links */}
-            <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-4">
               {LINKS.map(({ label, href }) => (
                 <motion.a
                   key={label}
                   href={href}
-                  target={href !== "#" ? "_blank" : undefined}
-                  rel={href !== "#" ? "noopener noreferrer" : undefined}
-                  className="border border-[#D8D8D4] text-[#555550] px-6 py-3 text-sm"
+                  target={href !== "#" && href.startsWith("http") ? "_blank" : undefined}
+                  rel={href !== "#" && href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="border border-[#D8D8D4] text-[#555550] px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm text-center sm:text-left transition-colors"
                   whileHover={{ borderColor: "#1A4A2E", color: "#1A4A2E" }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ duration: 0.2 }}

@@ -142,7 +142,7 @@ function HoldCTA({ href, label }: { href: string; label: string }) {
       onBlur={cancel}
       // Preserve keyboard accessibility: Enter key still navigates directly
       onKeyDown={(e) => { if (e.key === "Enter") { window.location.href = href; } }}
-      className="relative inline-flex items-center gap-2 bg-[#1A4A2E] text-white px-8 py-4 text-sm font-medium tracking-wide overflow-hidden select-none cursor-pointer"
+      className="relative inline-flex items-center justify-center gap-2 bg-[#1A4A2E] text-white px-6 sm:px-8 py-3.5 sm:py-4 text-sm font-medium tracking-wide overflow-hidden select-none cursor-pointer w-full sm:w-auto text-center"
       whileHover={{ backgroundColor: "#153D25" }}
       style={{ touchAction: "none" }} // prevent scroll interrupting hold on mobile
     >
@@ -200,7 +200,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={containerRef}
-      className="relative min-h-screen flex flex-col items-center justify-center px-8 md:px-16 overflow-hidden"
+      className="relative min-h-[100svh] flex flex-col items-center justify-center px-5 sm:px-8 md:px-16 pt-24 pb-16 sm:py-28 md:py-0 overflow-hidden"
     >
       {/* ── SVG background dot-grid — Motion scale + GSAP parallax ─────────── */}
       {/* Motion.div: owns `scale` (scroll-zoom 1→1.12)                         */}
@@ -242,7 +242,7 @@ export default function Hero() {
 
         {/* Eyebrow — fades in first */}
         <motion.p
-          className="text-xs font-sans font-medium tracking-widest uppercase text-[#1A4A2E] mb-6"
+          className="text-xs font-sans font-medium tracking-widest uppercase text-[#1A4A2E] mb-4 sm:mb-6"
           initial={{ opacity: 0, y: 6 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: "-40px" }}
@@ -253,9 +253,9 @@ export default function Hero() {
 
         {/* H1 — split word reveal, line by line ───────────────────────────── */}
         {/* Each word rises from below its own overflow-hidden clip mask       */}
-        <h1 className="font-serif font-medium leading-[1.1] tracking-tight text-[#111111] mb-8">
+        <h1 className="font-serif font-medium leading-[1.1] tracking-tight text-[#111111] mb-6 sm:mb-8">
           {/* Line 1: "Sheikh Mohammad" — words start at delay 0.3s */}
-          <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-1">
+          <span className="block text-4xl sm:text-6xl md:text-7xl lg:text-8xl mb-1">
             <SplitWords
               text={NAME_LINE1}
               delay={0.3}
@@ -264,7 +264,7 @@ export default function Hero() {
           </span>
 
           {/* Line 2: "Rakib." italic — starts after line 1 finishes */}
-          <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl italic">
+          <span className="block text-4xl sm:text-6xl md:text-7xl lg:text-8xl italic">
             <SplitWords
               text={NAME_LINE2}
               delay={0.55}
@@ -282,18 +282,18 @@ export default function Hero() {
         >
           <motion.p
             variants={itemVariants}
-            className="text-base md:text-lg text-[#555550] leading-relaxed max-w-xl mb-12"
+            className="text-sm sm:text-base md:text-lg text-[#555550] leading-relaxed max-w-xl mb-8 sm:mb-12"
           >
             {SUBHEADING}
           </motion.p>
 
-          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 max-w-md sm:max-w-none">
             {/* Primary CTA — hold-to-confirm interaction */}
             <HoldCTA href="#work" label={CTA_PRIMARY} />
 
             <motion.a
               href="#contact"
-              className="inline-flex items-center gap-2 border border-[#111111] text-[#111111] px-8 py-4 text-sm font-medium"
+              className="inline-flex items-center justify-center gap-2 border border-[#111111] text-[#111111] px-6 sm:px-8 py-3.5 sm:py-4 text-sm font-medium w-full sm:w-auto text-center"
               whileHover={{ backgroundColor: "#111111", color: "#ffffff" }}
               whileTap={{ scale: 0.97 }}
               transition={{ duration: 0.2 }}
@@ -306,7 +306,7 @@ export default function Hero() {
 
       {/* ── Scroll hint ───────────────────────────────────────────────────── */}
       <motion.div
-        className="absolute bottom-10 left-8 md:left-16"
+        className="hidden min-[850px]:block absolute bottom-8 lg:bottom-10 left-8 md:left-16"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: false }}

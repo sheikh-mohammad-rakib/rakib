@@ -216,30 +216,31 @@ export default function Projects() {
     <section
       id="work"
       ref={sectionRef}
-      className="px-8 md:px-16 py-24 md:py-32 border-b border-[#D8D8D4]"
+      className="px-5 sm:px-8 md:px-16 py-16 sm:py-24 md:py-32 border-b border-[#D8D8D4]"
     >
       <div className="max-w-7xl mx-auto">
 
-        <p className="text-xs font-sans font-medium uppercase tracking-widest text-[#555550] mb-14">
+        <p className="text-xs font-sans font-medium uppercase tracking-widest text-[#555550] mb-8 sm:mb-14">
           {SECTION_LABEL}
         </p>
 
-        {/* gap-px tiled grid — Design.md §4 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#D8D8D4] border border-[#D8D8D4]">
-          {PROJECTS.map((project) => (
+        {/* gap-px tiled grid — responsive 1 col (mobile) -> 2 cols (tablet) -> 3 cols (desktop) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#D8D8D4] border border-[#D8D8D4]">
+          {PROJECTS.map((project, idx) => (
             // data-project-card: GSAP targets this for entry animation
             // TiltCard wraps the inner content — GSAP's y/opacity + Motion's rotateX/Y = no conflict
             <div
               key={project.id}
               data-project-card
+              className={idx === 2 ? "md:col-span-2 lg:col-span-1" : ""}
             >
               <TiltCard>
                 {/* Card header */}
-                <div className="px-5 py-4 border-b border-[#D8D8D4] flex items-center justify-between">
-                  <span className="text-xs font-mono text-[#D8D8D4]">
+                <div className="px-4 sm:px-5 py-3.5 sm:py-4 border-b border-[#D8D8D4] flex items-center justify-between gap-3">
+                  <span className="text-xs font-mono text-[#D8D8D4] shrink-0">
                     {project.number}
                   </span>
-                  <span className="text-sm font-medium text-[#111111]">
+                  <span className="text-sm font-medium text-[#111111] text-right truncate">
                     {project.title}
                   </span>
                 </div>
@@ -251,15 +252,15 @@ export default function Projects() {
                 />
 
                 {/* Card body */}
-                <div className="px-5 py-5 flex flex-col gap-5 flex-1">
+                <div className="p-4 sm:p-5 flex flex-col gap-4 sm:gap-5 flex-1">
                   <p className="text-sm text-[#555550] leading-relaxed flex-1">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs text-[#555550] border border-[#D8D8D4] px-2 py-1"
+                        className="text-xs text-[#555550] border border-[#D8D8D4] px-2 py-0.5 sm:py-1"
                       >
                         {tag}
                       </span>
@@ -269,7 +270,7 @@ export default function Projects() {
                     href={project.href}
                     target={project.href.startsWith("http") ? "_blank" : undefined}
                     rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="self-start text-xs border border-[#D8D8D4] text-[#555550] px-4 py-2 hover:border-[#1A4A2E] hover:text-[#1A4A2E] transition-colors"
+                    className="self-start text-xs border border-[#D8D8D4] text-[#555550] px-3.5 sm:px-4 py-1.5 sm:py-2 hover:border-[#1A4A2E] hover:text-[#1A4A2E] transition-colors"
                   >
                     View project -&gt;
                   </a>
@@ -280,8 +281,8 @@ export default function Projects() {
         </div>
 
         {/* Academic Projects Subsection */}
-        <div className="mt-20 pt-16 border-t border-[#D8D8D4]">
-          <p className="text-xs font-sans font-medium uppercase tracking-widest text-[#555550] mb-10">
+        <div className="mt-12 sm:mt-20 pt-10 sm:pt-16 border-t border-[#D8D8D4]">
+          <p className="text-xs font-sans font-medium uppercase tracking-widest text-[#555550] mb-6 sm:mb-10">
             Academic & Mechatronic Systems
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#D8D8D4] border border-[#D8D8D4]">
@@ -292,25 +293,25 @@ export default function Projects() {
               >
                 <TiltCard>
                   {/* Card header */}
-                  <div className="px-5 py-4 border-b border-[#D8D8D4] flex items-center justify-between">
-                    <span className="text-xs font-mono text-[#D8D8D4]">
+                  <div className="px-4 sm:px-5 py-3.5 sm:py-4 border-b border-[#D8D8D4] flex items-center justify-between gap-3">
+                    <span className="text-xs font-mono text-[#D8D8D4] shrink-0">
                       {project.number}
                     </span>
-                    <span className="text-sm font-medium text-[#111111]">
+                    <span className="text-sm font-medium text-[#111111] text-right truncate">
                       {project.title}
                     </span>
                   </div>
 
                   {/* Card body */}
-                  <div className="px-5 py-6 flex flex-col gap-5 flex-1">
+                  <div className="p-4 sm:p-6 flex flex-col gap-4 sm:gap-5 flex-1">
                     <p className="text-sm text-[#555550] leading-relaxed flex-1">
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-xs text-[#555550] border border-[#D8D8D4] px-2 py-1"
+                          className="text-xs text-[#555550] border border-[#D8D8D4] px-2 py-0.5 sm:py-1"
                         >
                           {tag}
                         </span>
@@ -320,7 +321,7 @@ export default function Projects() {
                       href={project.href}
                       target={project.href.startsWith("http") ? "_blank" : undefined}
                       rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="self-start text-xs border border-[#D8D8D4] text-[#555550] px-4 py-2 hover:border-[#1A4A2E] hover:text-[#1A4A2E] transition-colors"
+                      className="self-start text-xs border border-[#D8D8D4] text-[#555550] px-3.5 sm:px-4 py-1.5 sm:py-2 hover:border-[#1A4A2E] hover:text-[#1A4A2E] transition-colors"
                     >
                       View code -&gt;
                     </a>

@@ -68,13 +68,13 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="px-8 md:px-16 py-24 md:py-32 border-b border-[#D8D8D4]"
+      className="px-5 sm:px-8 md:px-16 py-16 sm:py-24 md:py-32 border-b border-[#D8D8D4]"
     >
       <div className="max-w-7xl mx-auto">
 
         {/* Section label */}
         <motion.p
-          className="text-xs font-sans font-medium uppercase tracking-widest text-[#555550] mb-14"
+          className="text-xs font-sans font-medium uppercase tracking-widest text-[#555550] mb-8 sm:mb-14"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -84,7 +84,7 @@ export default function Education() {
         </motion.p>
 
         {/* Two-column layout: Left = Degrees, Right = Award & Certifications */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-start">
 
           {/* Left: Academic Degrees */}
           <motion.div
@@ -95,7 +95,7 @@ export default function Education() {
             viewport={{ once: false, margin: "-80px" }}
           >
             <div className="border border-[#D8D8D4]">
-              <div className="px-5 py-3.5 border-b border-[#D8D8D4]">
+              <div className="px-4 sm:px-5 py-3.5 border-b border-[#D8D8D4]">
                 <h3 className="text-xs font-medium uppercase tracking-widest text-[#555550]">
                   Academic Degrees
                 </h3>
@@ -103,8 +103,8 @@ export default function Education() {
 
               <div className="divide-y divide-[#D8D8D4]">
                 {DEGREES.map((item, idx) => (
-                  <div key={idx} className="p-6 flex flex-col gap-2 bg-[#F8F8F6]">
-                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                  <div key={idx} className="p-4 sm:p-6 flex flex-col gap-2 bg-[#F8F8F6]">
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-1 sm:gap-2">
                       <h4 className="text-sm font-medium text-[#111111] leading-snug">
                         {item.degree}
                       </h4>
@@ -130,7 +130,7 @@ export default function Education() {
 
           {/* Right: Honors & Certifications */}
           <motion.div
-            className="flex flex-col gap-8"
+            className="flex flex-col gap-6 sm:gap-8"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -139,7 +139,7 @@ export default function Education() {
           >
             {/* Honors & Awards Panel */}
             <div className="border border-[#D8D8D4]">
-              <div className="px-5 py-3.5 border-b border-[#D8D8D4] flex items-center justify-between">
+              <div className="px-4 sm:px-5 py-3.5 border-b border-[#D8D8D4] flex items-center justify-between">
                 <h3 className="text-xs font-medium uppercase tracking-widest text-[#555550]">
                   Honors & Awards
                 </h3>
@@ -147,9 +147,9 @@ export default function Education() {
                   {AWARD.period}
                 </span>
               </div>
-              <div className="p-6 bg-[#F8F8F6] flex flex-col gap-3">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#1A4A2E]" aria-hidden="true" />
+              <div className="p-4 sm:p-6 bg-[#F8F8F6] flex flex-col gap-3">
+                <div className="flex items-start gap-2">
+                  <span className="w-2 h-2 bg-[#1A4A2E] mt-1.5 shrink-0" aria-hidden="true" />
                   <h4 className="text-sm font-medium text-[#111111]">
                     {AWARD.title}
                   </h4>
@@ -165,19 +165,19 @@ export default function Education() {
 
             {/* Certifications Panel */}
             <div className="border border-[#D8D8D4]">
-              <div className="px-5 py-3.5 border-b border-[#D8D8D4]">
+              <div className="px-4 sm:px-5 py-3.5 border-b border-[#D8D8D4]">
                 <h3 className="text-xs font-medium uppercase tracking-widest text-[#555550]">
                   Professional Certifications
                 </h3>
               </div>
               <div className="divide-y divide-[#D8D8D4]">
                 {CERTIFICATIONS.map((cert, idx) => (
-                  <div key={idx} className="p-6 bg-[#F8F8F6] flex flex-col gap-2">
-                    <div className="flex items-start justify-between gap-3">
+                  <div key={idx} className="p-4 sm:p-6 bg-[#F8F8F6] flex flex-col gap-2">
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-1.5 sm:gap-3">
                       <h4 className="text-sm font-medium text-[#111111]">
                         {cert.title}
                       </h4>
-                      <span className="shrink-0 text-xs font-mono text-[#555550] border border-[#D8D8D4] px-2 py-0.5">
+                      <span className="self-start sm:self-auto shrink-0 text-xs font-mono text-[#555550] border border-[#D8D8D4] px-2 py-0.5">
                         {cert.issuer}
                       </span>
                     </div>

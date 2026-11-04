@@ -121,30 +121,30 @@ export default function Skills() {
     <section
       id="skills"
       ref={sectionRef}
-      className="px-8 md:px-16 py-24 md:py-32 border-b border-[#D8D8D4]"
+      className="px-5 sm:px-8 md:px-16 py-16 sm:py-24 md:py-32 border-b border-[#D8D8D4]"
     >
       <div className="max-w-7xl mx-auto">
 
         {/* Section label */}
-        <p className="text-xs font-sans font-medium uppercase tracking-widest text-[#555550] mb-14">
+        <p className="text-xs font-sans font-medium uppercase tracking-widest text-[#555550] mb-8 sm:mb-14">
           {SECTION_LABEL}
         </p>
 
         {/* Editorial tiled grid — Design.md §4 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#D8D8D4] border border-[#D8D8D4]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#D8D8D4] border border-[#D8D8D4]">
           {SKILL_CATEGORIES.map((group) => (
             <div key={group.category} className="bg-[#F8F8F6] flex flex-col">
-              <div className="px-5 py-3.5 border-b border-[#D8D8D4] flex items-center justify-between">
+              <div className="px-4 sm:px-5 py-3 sm:py-3.5 border-b border-[#D8D8D4] flex items-center justify-between">
                 <span className="text-xs font-medium uppercase tracking-widest text-[#555550]">
                   {group.category}
                 </span>
               </div>
-              <div className="p-5 flex flex-wrap gap-2 flex-1">
+              <div className="p-4 sm:p-5 flex flex-wrap gap-2 flex-1">
                 {group.items.map((skill) => (
                   <span
                     key={skill}
                     data-skill
-                    className="border border-[#D8D8D4] text-[#555550] px-3 py-1.5 text-xs hover:border-[#1A4A2E] hover:text-[#1A4A2E] transition-colors cursor-default"
+                    className="border border-[#D8D8D4] text-[#555550] px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs hover:border-[#1A4A2E] hover:text-[#1A4A2E] transition-colors cursor-default"
                   >
                     {skill}
                   </span>
